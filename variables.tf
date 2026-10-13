@@ -16,7 +16,12 @@ variable "common_resource_groups" {
   }))
   nullable = false
   default = {
-    common = { enabled = true, labs = "2-11" } # zasoby wspólne, trwałe
+    common     = { enabled = true, labs = "1-10" } # zasoby wspólne, trwałe
+    basic      = { enabled = true, labs = "1-3" }
+    function   = { enabled = true, labs = "4-15" }
+    vm         = { enabled = true, labs = "5-6" }
+    advanced   = { enabled = true, labs = "7-9" }
+    industry40 = { enabled = true, labs = "10" }
 
     # TODO: Dodaj pozostałe grupy zasobów (krok 1)
   }
@@ -76,7 +81,7 @@ variable "contact_emails" {
   raz w powłoce (Laboratorium 2), np.:
   export TF_VAR_contact_emails='["imie.nazwisko@student.pk.edu.pl","drugi.adres@example.com"]'
   EOT
-  default     = ["imie.nazwisko@student.pk.edu.pl", "drugi.adres@example.com"]
+  default     = ["pawel.nowak92@student.pk.edu.pl", "pawel.j.nowak@proton.me"]
   type        = list(string)
   nullable    = false
   validation {
