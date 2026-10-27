@@ -59,10 +59,10 @@ variable "create_sops_key" {
   EOT
   type        = bool
   nullable    = false
-  default     = false
+  default     = true
 }
 
-# Opcjonalne: objectId principal-a (np. użytkownika `devops` -- część opcjonalna labu), któremu
+# Opcjonalne: objectId principal-a (np. użytkownika `yesdevops` -- część opcjonalna labu), któremu
 # chcesz nadać prawa do klucza. Jeśli puste, używany jest principal uruchamiający OpenTofu
 # (data.azurerm_client_config.current.object_id).
 variable "sops_principal_object_id" {

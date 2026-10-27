@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: secret.*\.yaml$
+    azure_keyvault: "https://kv-main26-g14k05n152507.vault.azure.net/keys/sops-encryption-key/1db2291149134a8794f616b6f308bc26"
